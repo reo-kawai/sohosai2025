@@ -41,35 +41,6 @@
 \tcbuselibrary{raster,breakable,theorems,skins}
 
 
-% マクロの定義 ----------------------------------------------------------------------------------------------------------------
-
-% ギリシャ文字
-\newcommand{\al}{\alpha}
-\newcommand{\be}{\beta}
-\newcommand{\ga}{\gamma}
-\newcommand{\de}{\delta}
-\newcommand{\ep}{\varepsilon}
-\newcommand{\ka}{\kappa}
-\newcommand{\la}{\lambda}
-\newcommand{\om}{\omega}
-\newcommand{\ta}{\tau}
-\newcommand{\si}{\sigma}
-
-% 物理量
-\newcommand{\Hcal}{\mathcal{H}}
-\newcommand{\Lcal}{\mathcal{L}}
-\newcommand{\Ocal}{\mathcal{O}}
-%\newcommand{\paarr}{\partial}
-\newcommand{\zb}{\overline{z}}
-
-% 数学記号
-\newcommand{\Nbb}{\mathbb{N}}
-\newcommand{\Zbb}{\mathbb{Z}}
-\newcommand{\Rbb}{\mathbb{R}}
-\newcommand{\Cbb}{\mathbb{C}}
-\newcommand{\id}{\textrm{id}}
-
-
 % プリアンブルおわり ==============================================================
 
 \begin{document}
@@ -81,21 +52,70 @@
 
 %\tableofcontents
 
-10ページで書く
+本記事ではホログラフィー原理による超伝導現象の解析の試みと，
+特にその近年の進展について紹介します．
+
+
+
+
+解析手段としてのホログラフィー原理
+→ RHICにおける成功
+• その他の強結合ゲージ場への応用
+→ 高温超伝導に対する期待
+• ホログラフィック超伝導にあった問題点の解決
+→ 境界上の電磁場にダイナミクスを導入
+
+
+
 ホログラフィック超伝導というのがあるよ
+
 強結合、つまり高温超伝導を解決できるかもしれないよ
+
 ホログラフィーっていうのは場の理論の問題を重力を使って簡単に解くことができる手法だよ
+
 従来のホログラフィック超伝導はゲージ場がダイナミカルじゃないから問題だよ
 （例えばMeissner効果が起きないよ？？？）
+
 最近提唱されたモデルではMeissner効果が起きるなど従来の問題を解決したよ
 
 \section{導入}
+ホログラフィー原理とは重力理論とゲージ理論が等価であるという主張であり，
+量子重力理論の構築への足がけとして期待されている枠組みです．
+そんな熱い期待がかけられているホログラフィー原理は，
+実はその端緒を弦理論にもちます．
+にもかかわらず弦理論がよく言われる検証不可能性
+\footnote{弦理論の典型的なエネルギースケールは
+程度であり，現在稼働している加速器のエネルギースケールは
+程度です．
+ただ高エネルギースケールの弦理論から示唆される結果は
+直接的な観測はできないものの
+string phenomenologyという分野もあると聞きますが，筆者はその有用性と詳細を知らないので言及しません．}
+とは一線を画し，実際に現実の観測量と結びつける研究が多数行われています．
+よく挙げられる例はクォーク・グルーオン・プラズマ\cite{Policastro01,Kovtun04}
+や超伝導\cite{Hartnoll08a,Hartnoll08b}
 
-\subsection{ホログラフィック超伝導とは}
-ホログラフィー原理を知っているか？
-ここがすごい！ホログラフィー原理
+今回は超伝導（正確には超伝導っぽいもの）をホログラフィー原理を用いて解析する
 
 \subsection{ホログラフィー原理}
+ホログラフィー原理を知っているか？
+ここがすごい！ホログラフィー原理
+AdS/CFT対応ともよばれ，
+$d + 2$次元の重力理論と$d + 1$次元のゲージ理論が等価になるという主張．
+1997年にMaldacenaにより最初の例が示された\cite{Maldacena97}．
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.9\textwidth]{holography.png}
+    \caption{ホログラフィー原理の概念図}
+    \label{fig:holography}
+\end{figure}
+
+
+GKP--Witten関係式
+バルク中の場$\mathcal{J}(x)$が
+境界上の物理量$\mathcal{O}(x)$のソースとなる
+\cite{Gubser98,Witten98}
+
 
 \subsubsection{QGP}
 BNLのレポート
@@ -104,19 +124,17 @@ BNLのレポート
 ホログラフィーによる計算$\frac{\eta}{s} = \frac{1 \hbar}{4 \pi k_B} \approx 0.08$．
 
 実験レポート
-Energy Loss and Flow of Heavy Quarks in Au+Au Collisions at sqrt($s_NN$) = 200 GeV
-PHENIX Collaboration: A. Adare, et al
+\cite{PHENIX06}
 
 引用されている粘性の予言
-Viscosity in Strongly Interacting Quantum Field Theories from Black Hole Physics
-P.Kovtun, D.T.Son, A.O.Starinets
+\cite{Kovtun04}
 
 QGPにおける「成功」があった
 他の例にも応用したい
 とりあえず同じような強結合の場に応用してみる
 物性においてはそのような強相関系
 
-筆者の仕事で、時間依存する重力時空と流体力学の関係、および時空の正則性と
+中村真の仕事で、時間依存する重力時空と流体力学の関係、および時空の正則性と
 流体の輸送係数を論じた代表的な論文は
 S. Kinoshita, S. Mukohyama, S. Nakamura and K. y. Oda, “Consistent Anti-de
 Sitter-Space/Conformal-Field-Theory Dual for a Time-Dependent Finite Tem-
@@ -132,7 +150,33 @@ th/0512162].
 
 
 
-\section{従来の模型}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{ホログラフィック超伝導}
+
+\subsection{高温超伝導}
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.9\textwidth]{tc-history_2025.jpg}
+    \caption{超伝導転移温度の記録}
+    \label{fig:tc-history}
+\end{figure}
+%東京大学 大学院総合文化研究科 広域科学専攻 相関基礎科学系 橘高研究室
+%\url{https://park.itc.u-tokyo.ac.jp/kittaka/contents/others/tc-history/index.html}
 
 Hartnollのレビュー！！！！！！！！！！！！！！！！！！！！！！
 
@@ -198,6 +242,46 @@ HHH論文の非常に重要な功績は、このモデルを用いて
 
 
 
+
+
+
+
+
+\section{より現実的なモデルにするために}
+
+上で作った模型は現実の超伝導の解析という目的からすると多くの問題があります．
+\begin{itemize}
+    \item Meissner効果が起こらない
+    \item ラージNゲージ理論になっている
+    \item AAA
+\end{itemize}
+ここでは
+のMeissner効果が起こらないについて
+
+作用にはMaxwell場が入っているじゃないかと思われるかもしれませんが，
+
+Natsuume論文の新規模型は、HHH論文などで確立された従来模型の「外部ソース」という制限を取り払い、
+電磁場のダイナミクスを直接組み込むことで、従来は間接的にしか示唆できなかったマイスナー効果を、
+モデル内で直接的かつ解析的に示すことに成功した
+
+\subsection{ホログラフィックMeissner効果}
+
+
+
+
+\subsection{5次元模型}
+
+ホログラフィック繰り込みの考えから境界に対数項$S_{\text{ct}}$が必要となる．
+オンシェル超重力作用$S_{\text{sugra}}$の発散は、
+バルク時空の境界（カットオフ$\rho = \epsilon$または$r^2 = \epsilon$）で評価されますが、その発散の構造は境界次元$d$に依存します。
+• 奇数次元の場合: 発散項は$\epsilon$の逆べき乗（$\frac{1}{\epsilon^k}$）の形のみで出現します。
+• 偶数次元の場合: $\epsilon$の逆べき乗の項に加えて、対数発散項$\log \epsilon$が出現します
+
+
+対数発散は、ホログラフィック繰り込みにおいて特殊な対処を必要とします。
+
+作用を有限化するためには、この$\log$の発散も打ち消すように、
+境界対項$S_{ct}$を含めなければなりません\cite{deHaro00}．
 
 
 
@@ -402,21 +486,8 @@ GLパラメータの導出（5次元バルクの場合）:
 超伝導体の種類（第一種か第二種か）を決定するGLパラメータ $\kappa^2 = \lambda^2 / \xi^2$ を解析的に導出
 超伝導体の性質が温度や結合定数にどう依存するかが明らかになりました
 
-\section{ホログラフィックMeissner効果}
 
-Natsuume論文の新規模型は、HHH論文などで確立された従来模型の「外部ソース」という制限を取り払い、
-電磁場のダイナミクスを直接組み込むことで、従来は間接的にしか示唆できなかったマイスナー効果を、
-モデル内で直接的かつ解析的に示すことに成功した
-
-\subsection{\texorpdfstring{トーラス$T^2$}{トーラスT2}}
-
-\section{具体例}
-
-\cite{a}
-
-\begin{thebibliography}{99}
-\bibitem{a} 夏梅
-\bibitem{b} 文献情報
-\end{thebibliography}
+\bibliography{sohosai2025}
+\bibliographystyle{junsrt}
 
 \end{document}
